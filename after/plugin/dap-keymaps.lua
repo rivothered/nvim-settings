@@ -21,4 +21,4 @@ map('n', '<leader>du', dapui.toggle, { desc = 'DAP: Toggle UI' })
 
 map('n', '<leader>dh', function()
     require('dap.ui.widgets').hover()
-end, { desc = 'DAP: Hover (inspect
+end, { desc = 'DAP: Hover (inspect variable)' })
