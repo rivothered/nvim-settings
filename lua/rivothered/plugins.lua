@@ -23,6 +23,7 @@ require('pckr').add {
   "neovim/nvim-lspconfig";
   "leoluz/nvim-dap-go";
   "mfussenegger/nvim-jdtls";
+  "akinsho/horizon.nvim";
   {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
