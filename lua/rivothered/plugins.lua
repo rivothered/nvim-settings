@@ -24,6 +24,8 @@ require('pckr').add {
   "leoluz/nvim-dap-go";
   "mfussenegger/nvim-jdtls";
   "akinsho/horizon.nvim";
+  "akinsho/bufferline.nvim";
+  "nvim-tree/nvim-web-devicons";
   {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
