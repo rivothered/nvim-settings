@@ -31,7 +31,7 @@ require('pckr').add {
     "saghen/blink.cmp",
     requires = "saghen/blink.lib",
     run = function()
-        require("blink.cmp").build():pwait()
+      require("blink.cmp").build():pwait()
     end,
   },
   {
