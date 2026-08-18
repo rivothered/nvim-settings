@@ -52,6 +52,8 @@ local function find_cargo_toml(start_path)
 end
 
 local function get_rust_executable()
+    vim.cmd("wa")
+
     local cwd = vim.fn.getcwd()
     local cargo_toml = find_cargo_toml(cwd)
 
@@ -69,6 +71,8 @@ local function get_rust_executable()
     end
 
     local default_path = project_root .. '/target/debug/' .. package_name
+
+    vim.fn.system("pkill -f " .. vim.fn.shellescape(default_path))
 
     vim.notify("Building project (cargo build)...", vim.log.levels.INFO)
     local result = vim.fn.system("cd " .. vim.fn.shellescape(project_root) .. " && cargo build")

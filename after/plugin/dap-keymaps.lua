@@ -14,7 +14,14 @@ map('n', '<leader>dB', function()
 end, { desc = 'DAP: Conditional Breakpoint' })
 
 map('n', '<leader>dc', dap.continue, { desc = 'DAP: Continue' })
-map('n', '<leader>dt', dap.terminate, { desc = 'DAP: Terminate' })
+map('n', '<leader>dt', function()
+    local dap = require('dap')
+    local dapui = require('dapui')
+
+    dap.terminate()
+    dap.close()
+    dapui.close()
+end, { desc = 'DAP: Terminate' })
 map('n', '<leader>dr', dap.repl.open, { desc = 'DAP: Open REPL' })
 
 map('n', '<leader>du', dapui.toggle, { desc = 'DAP: Toggle UI' })
